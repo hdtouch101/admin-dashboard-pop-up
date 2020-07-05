@@ -1,41 +1,82 @@
 body {
-    max-width: 50%;
-    max-height: 50%;
-    /* margin: auto; */
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    /* font-size: 24px; */
-    line-height: 24px;
+    margin: 0;
     padding: 0;
-    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    user-select: none;
 }
 
-.pop-up-container{
+/* .center, .content {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: tr;
+} */
+
+.click-me {
+    display: block;
+    max-width: 100px;
+    height: 50px; 
+    background: rgb(5, 5, 119);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    line-height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#click {
+    display: none;
+}
+
+.click-me:hover {
+    background: lightblue;
+    color: black;
+}
+
+.pop-up-container {
+    opacity: 1;
+    visibility: hidden;
+    width: 700px;
+    height: 650px;
+    border-radius: 5px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.5);
+}
+
+#click:checked ~ .pop-up-container {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.center, .pop-up-container{
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
     margin: auto;
-    /* padding-bottom: 20%; */
-    /* margin-top: 200px; */
 }
 
 .exit-button{
     /* display: block; */
-    position: fixed;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 
 }
 
 .close {
     float: right;
     width: 20px;
-    /* padding-top: 50px; */
+    padding-top: 20px;
 }
 
 .img-contain {
     display: flex;
-    padding-top: 150px;
+    padding-top: 100px;
 
 }
 
@@ -50,12 +91,16 @@ body {
 h3{
     text-align: center;
     font-size: 24px;
-    padding-bottom: 30px;
+    
+    /* padding-bottom: 30px; */
 }
 
-p {
+p, strong {
+    margin-left: 20px;
     line-height: 24px;
     padding-bottom: 10px;
+    justify-content: center;
+    padding: 0 3px 0 3px;
 }
 
 a {
